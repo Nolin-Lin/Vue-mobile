@@ -15,9 +15,12 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+
 }
 #nav {
+  display: flex;
   padding: 30px;
+  width: 188px;
   a {
     font-weight: bold;
     color: #2c3e50;
