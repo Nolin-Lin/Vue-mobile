@@ -5,10 +5,10 @@ module.exports = {
     open: true,
     https: false,
     hotOnly: false,
-    proxy: null, // 设置代理
+    proxy: null // 设置代理
   },
   chainWebpack: (config) => {
     config.resolve.symlinks(true);
     return config;
-  },
+  }
 };
