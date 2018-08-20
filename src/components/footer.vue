@@ -1,46 +1,64 @@
 <template>
   <footer>
     <ul class="footer-warp">
-      <li class="footer-item active">
+      <router-link tag="li" to="/index" class="footer-item">
         <div class="footer-svg">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-index-active"></use>
+            <use
+              :xlink:href=" `#icon-index${$route.path.indexOf('index') !== -1? '-active' : ''}` "
+            ></use>
           </svg>
         </div>
         <div class="footer-text">首页</div>
-      </li>
-      <li class="footer-item">
+      </router-link>
+      <router-link tag="li" to="/shop" class="footer-item">
         <div class="footer-svg">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-goods"></use>
+            <use
+              :xlink:href="
+                $route.path.indexOf('shop') !== -1? '#icon-goods-active' : '#icon-goods'
+              "
+            ></use>
           </svg>
         </div>
         <div class="footer-text">商品库</div>
-      </li>
-      <li class="footer-item">
+      </router-link>
+      <router-link tag="li" to="/order" class="footer-item">
         <div class="footer-svg">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-order"></use>
+            <use
+              :xlink:href="
+                $route.path.indexOf('order') !== -1? '#icon-order-active' : '#icon-order'
+              "
+            ></use>
           </svg>
         </div>
         <div class="footer-text">订单管理</div>
-      </li>
-      <li class="footer-item">
+      </router-link>
+      <router-link tag="li" to="/msg" class="footer-item">
         <div class="footer-svg">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-order"></use>
+            <use
+              :xlink:href="
+                $route.path.indexOf('msg') !== -1? '#icon-message-active' : '#icon-message'
+              "
+            ></use>
           </svg>
         </div>
         <div class="footer-text">通知</div>
-      </li>
-      <li class="footer-item">
+      </router-link>
+      <router-link tag="li" to="/my" class="footer-item">
         <div class="footer-svg">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-my"></use>
+            <use
+              :xlink:href="
+                $route.path.indexOf('my') !== -1? '#icon-my-active' : '#icon-my'
+              "
+            ></use>
           </svg>
         </div>
         <div class="footer-text">我的</div>
-      </li>
+      </router-link>
     </ul>
   </footer>
 </template>
@@ -70,13 +88,13 @@ footer {
     align-items: center;
     .footer-item {
       width: 100%;
-      padding: 10px 0;
+      padding: 6px 0;
       text-align: center;
       color: #b2c0c8;
       font-size: 28px;
       .footer-svg {
-        width: 48px;
-        height: 48px;
+        width: 46px;
+        height: 46px;
         margin: 0 auto 10px;
         svg{
           width: 100%;
@@ -84,7 +102,7 @@ footer {
         }
       }
     }
-    .active {
+    .router-link-active {
       color: #f8b449;
     }
   }

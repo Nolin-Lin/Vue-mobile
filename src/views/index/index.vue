@@ -20,12 +20,14 @@
               <img src="@/assets/banner.jpeg">
           </div>
       </div>
+      <totop></totop>
       <footBar></footBar>
   </div>
 </template>
 
 <script>
 import footBar from '@/components/footer.vue';
+import totop from '@/components/ToTop.vue';
 
 export default {
   data() {
@@ -33,7 +35,8 @@ export default {
     };
   },
   components: {
-    footBar
+    footBar,
+    totop
   }
 };
 </script>
