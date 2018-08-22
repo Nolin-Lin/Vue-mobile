@@ -10,6 +10,12 @@ if ('addEventListener' in document) {
   }, false);
 }
 
+// 在路由切换的时候回到顶部了
+router.beforeEach((to, from, next) => {
+  window.scrollTo(0, 0);
+  next();
+});
+
 Vue.config.productionTip = false;
 
 new Vue({
