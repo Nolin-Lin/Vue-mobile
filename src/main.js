@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import FastClick from 'fastclick';
 import App from './App.vue';
-import router from './router';
+import router from './router/router';
 import store from './store';
 
 if ('addEventListener' in document) {

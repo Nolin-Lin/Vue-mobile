@@ -81,7 +81,6 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
   background-color: #fff;
   box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.25);
   .footer-warp {
