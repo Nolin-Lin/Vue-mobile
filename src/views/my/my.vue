@@ -1,6 +1,7 @@
 <template>
   <div class="my">
-    <div class="my-user my-card">
+    <NavBar title="我的"></NavBar>
+    <router-link tag="div" to="info" class="my-user my-card">
       <div class="my-card-left">
         <div class="my-user-avatar">
           <img src="@/assets/avatar.png">
@@ -12,7 +13,7 @@
           <use xlink:href="#icon-right-arrow"></use>
         </svg>
       </div>
-    </div>
+    </router-link>
     <div class="my-card">
       <div class="my-card-left">
         <div class="my-card-svg">
@@ -48,6 +49,7 @@
 </template>
 
 <script>
+import NavBar from '@/components/NavBar.vue';
 import footBar from '@/components/footer.vue';
 
 export default {
@@ -56,7 +58,8 @@ export default {
     };
   },
   components: {
-    footBar
+    footBar,
+    NavBar
   }
 };
 </script>
