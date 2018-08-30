@@ -14,7 +14,7 @@
         </svg>
       </div>
     </router-link>
-    <div class="my-card">
+    <router-link tag="div" to="collect" class=" my-card">
       <div class="my-card-left">
         <div class="my-card-svg">
           <svg class="icon" aria-hidden="true">
@@ -28,7 +28,7 @@
           <use xlink:href="#icon-right-arrow"></use>
         </svg>
       </div>
-    </div>
+    </router-link>
     <div class="my-card">
       <div class="my-card-left">
         <div class="my-card-svg">
@@ -44,6 +44,7 @@
         </svg>
       </div>
     </div>
+
     <footBar></footBar>
   </div>
 </template>
@@ -66,8 +67,6 @@ export default {
 
 <style lang='scss' scoped>
 .my{
-  height: 100%;
-  background: #EFF3F6;
   &-card, .my-card-left{
     display: flex;
     align-items: center;

@@ -82,7 +82,7 @@ footer {
   left: 0;
   width: 100%;
   background-color: #fff;
-  box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
   .footer-warp {
     display: flex;
     align-items: center;

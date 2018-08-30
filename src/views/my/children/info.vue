@@ -15,7 +15,7 @@
           </div>
         </div>
       </div>
-      <div class="info-card-item">
+      <router-link tag="div" to="setusername" class="info-card-item">
         <div class="info-card-left">昵称</div>
         <div class="info-card-right">
           <div class="info-cont">苏小杰</div>
@@ -25,7 +25,7 @@
             </svg>
           </div>
         </div>
-      </div>
+      </router-link>
     </div>
     <div class="info-card">
       <div class="info-card-item">
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="info-card">
-      <div class="info-card-item">
+      <router-link tag="div" to="setpassword" class="info-card-item">
         <div class="info-card-left">修改密码</div>
         <div class="info-card-right">
           <div class="info-card-svg">
@@ -72,8 +72,9 @@
             </svg>
           </div>
         </div>
-      </div>
+      </router-link>
     </div>
+    <div class="info-btn">退出登陆</div>
   </div>
 </template>
 
@@ -94,8 +95,6 @@ export default {
 
 <style lang='scss' scoped>
 .info {
-  height: 100%;
-  background-color: #eff3f6;
   &-card {
     margin-bottom: 26px;
     background-color: #fff;
@@ -134,6 +133,15 @@ export default {
         color: #455563;
       }
     }
+  }
+  &-btn{
+    padding: 28px 0;
+    margin: 100px 32px 0;
+    text-align: center;
+    font-size: 32px;
+    color: #fff;
+    border-radius:6px;
+    background:#F6A11C;
   }
 }
 </style>

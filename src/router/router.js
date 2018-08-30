@@ -5,11 +5,33 @@ Vue.use(Router);
 
 const routes = [
   { path: '/', redirect: 'index', component: resolve => require(['@/views/index/index'], resolve) },
-  { path: '/login', name: 'login', component: resolve => require(['@/views/login/login'], resolve) },
-  { path: '/index', name: 'index', component: resolve => require(['@/views/index/index'], resolve) },
-  { path: '/shop', name: 'shop', component: resolve => require(['@/views/shop/shop'], resolve) },
-  { path: '/my', name: 'my', component: resolve => require(['@/views/my/my'], resolve) },
-  { path: '/info', name: 'info', component: resolve => require(['@/views/my/info'], resolve) }
+  { path: '/login', component: resolve => require(['@/views/login/login'], resolve) },
+  { path: '/index', component: resolve => require(['@/views/index/index'], resolve) },
+  { path: '/shop', component: resolve => require(['@/views/shop/shop'], resolve) },
+  {
+    path: '/my',
+    redirect: '/my/my',
+    component: resolve => require(['@/views/my/container'], resolve),
+    children: [
+      {
+        path: 'my',
+        component: resolve => require(['@/views/my/children/my'], resolve)
+      }, {
+        path: 'info',
+        component: resolve => require(['@/views/my/children/info'], resolve)
+      }, {
+        path: 'setusername',
+        component: resolve => require(['@/views/my/children/setusername'], resolve)
+      }, {
+        path: 'setpassword',
+        component: resolve => require(['@/views/my/children/setpassword'], resolve)
+      },
+      {
+        path: 'collect',
+        component: resolve => require(['@/views/my/children/collect'], resolve)
+      }
+    ]
+  }
 ];
 
 export default new Router({

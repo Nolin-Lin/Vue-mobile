@@ -81,6 +81,7 @@ export default {
       const c = end;
       const d = durning;
       let val = 0;
+
       const ifval = (t /= d / 2) < 1;
 
       if (ifval) {
