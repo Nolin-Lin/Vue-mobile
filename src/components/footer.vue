@@ -1,70 +1,71 @@
 <template>
   <footer>
-    <ul class="footer-warp">
-      <router-link tag="li" to="/index" class="footer-item">
-        <div class="footer-svg">
-          <svg class="icon" aria-hidden="true">
-            <use
-              :xlink:href=" `#icon-index${$route.path.indexOf('index') !== -1? '-active' : ''}` "
-            ></use>
-          </svg>
-        </div>
-        <div class="footer-text">首页</div>
-      </router-link>
-      <router-link tag="li" to="/shop" class="footer-item">
-        <div class="footer-svg">
-          <svg class="icon" aria-hidden="true">
-            <use
-              :xlink:href="
-                $route.path.indexOf('shop') !== -1? '#icon-goods-active' : '#icon-goods'
-              "
-            ></use>
-          </svg>
-        </div>
-        <div class="footer-text">商品库</div>
-      </router-link>
-      <router-link tag="li" to="/order" class="footer-item">
-        <div class="footer-svg">
-          <svg class="icon" aria-hidden="true">
-            <use
-              :xlink:href="
-                $route.path.indexOf('order') !== -1? '#icon-order-active' : '#icon-order'
-              "
-            ></use>
-          </svg>
-        </div>
-        <div class="footer-text">订单管理</div>
-      </router-link>
-      <router-link tag="li" to="/msg" class="footer-item">
-        <div class="footer-svg">
-          <svg class="icon" aria-hidden="true">
-            <use
-              :xlink:href="
-                $route.path.indexOf('msg') !== -1? '#icon-message-active' : '#icon-message'
-              "
-            ></use>
-          </svg>
-        </div>
-        <div class="footer-text">通知</div>
-      </router-link>
-      <router-link tag="li" to="/my" class="footer-item">
-        <div class="footer-svg">
-          <svg class="icon" aria-hidden="true">
-            <use
-              :xlink:href="
-                $route.path.indexOf('my') !== -1? '#icon-my-active' : '#icon-my'
-              "
-            ></use>
-          </svg>
-        </div>
-        <div class="footer-text">我的</div>
-      </router-link>
-    </ul>
+    <div class="footer-fix">
+      <ul class="footer-warp">
+        <router-link tag="li" to="/index" class="footer-item">
+          <div class="footer-svg">
+            <svg class="icon" aria-hidden="true">
+              <use
+                :xlink:href=" `#icon-index${$route.path.indexOf('index') !== -1? '-active' : ''}` "
+              ></use>
+            </svg>
+          </div>
+          <div class="footer-text">首页</div>
+        </router-link>
+        <router-link tag="li" to="/shop" class="footer-item">
+          <div class="footer-svg">
+            <svg class="icon" aria-hidden="true">
+              <use
+                :xlink:href="
+                  $route.path.indexOf('shop') !== -1? '#icon-goods-active' : '#icon-goods'
+                "
+              ></use>
+            </svg>
+          </div>
+          <div class="footer-text">商品库</div>
+        </router-link>
+        <router-link tag="li" to="/order" class="footer-item">
+          <div class="footer-svg">
+            <svg class="icon" aria-hidden="true">
+              <use
+                :xlink:href="
+                  $route.path.indexOf('order') !== -1? '#icon-order-active' : '#icon-order'
+                "
+              ></use>
+            </svg>
+          </div>
+          <div class="footer-text">订单管理</div>
+        </router-link>
+        <router-link tag="li" to="/msg" class="footer-item">
+          <div class="footer-svg">
+            <svg class="icon" aria-hidden="true">
+              <use
+                :xlink:href="
+                  $route.path.indexOf('msg') !== -1? '#icon-message-active' : '#icon-message'
+                "
+              ></use>
+            </svg>
+          </div>
+          <div class="footer-text">通知</div>
+        </router-link>
+        <router-link tag="li" to="/my" class="footer-item">
+          <div class="footer-svg">
+            <svg class="icon" aria-hidden="true">
+              <use
+                :xlink:href="
+                  $route.path.indexOf('my') !== -1? '#icon-my-active' : '#icon-my'
+                "
+              ></use>
+            </svg>
+          </div>
+          <div class="footer-text">我的</div>
+        </router-link>
+      </ul>
+    </div>
   </footer>
 </template>
 
 <script>
-import '@/js/iconfont.min';
 
 export default {
   data() {
@@ -75,14 +76,15 @@ export default {
 </script>
 
 <style lang='scss'>
-#app{padding-bottom: 148px;overflow: hidden;}
-footer {
+// #app{padding-bottom: 148px;overflow: hidden;}
+footer{height: 136px;}
+.footer-fix{
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   background-color: #fff;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -2px 4px 0px;
   .footer-warp {
     display: flex;
     align-items: center;

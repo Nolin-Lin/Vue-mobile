@@ -29,8 +29,10 @@ export default {
 .nav{
   position: relative;
   padding: 21px 31px;
-  background-color: #fff;
+  background-color: #373A3F;
   border-bottom: 1px solid #ebebeb;
+  color: #fff;
+
   &-svg{
     width: 25px;
     height: 46px;
@@ -40,8 +42,8 @@ export default {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #333;
     font-size: 36px;
+    font-weight: 600;
   }
 }
 </style>

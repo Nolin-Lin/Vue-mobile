@@ -10,7 +10,7 @@ module.exports = {
       mediaQuery: false // 允许在媒体查询中转换`px`
     },
     'postcss-viewport-units': {},
-    autoprefixer: { browsers: ['iOS >= 7', 'Android >= 4'] },
+    autoprefixer: { browsers: ['last 7 versions', 'not ie <=8', 'ios >= 8', 'android >= 4.0'] },
     cssnano: { 'postcss-zindex': false }
   }
 };

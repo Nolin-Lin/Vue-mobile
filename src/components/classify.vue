@@ -39,112 +39,124 @@
 
 <script>
 export default {
+  props: {
+    classifyTab: {
+      type: Array,
+      default() {
+        return [
+          {
+            name: '品牌',
+            class: 'shop-classify-item',
+            icon: '#icon-down-arrow'
+          },
+          {
+            name: '风格',
+            class: 'shop-classify-item',
+            icon: '#icon-down-arrow'
+          },
+          {
+            name: '空间',
+            class: 'shop-classify-item',
+            icon: '#icon-down-arrow'
+          },
+          {
+            name: '品类',
+            class: 'shop-classify-item',
+            icon: '#icon-down-arrow'
+          },
+          {
+            name: '模型',
+            class: 'shop-classify-item',
+            icon: '#icon-down-arrow'
+          }
+        ];
+      }
+    },
+    classifyItem: {
+      type: Array,
+      default() {
+        return [
+          {
+            show: true,
+            cont: [
+              {
+                class: 'classify-popup-item active',
+                name: '择美优配1-1',
+                icon: '#icon-icon-yes-active'
+              },
+              {
+                class: 'classify-popup-item',
+                name: '择美优配1-2',
+                icon: '#icon-icon-yes'
+              }
+            ]
+          },
+          {
+            show: false,
+            cont: [
+              {
+                class: 'classify-popup-item active',
+                name: '择美优配2-1',
+                icon: '#icon-icon-yes-active'
+              },
+              {
+                class: 'classify-popup-item',
+                name: '择美优配2-2',
+                icon: '#icon-icon-yes'
+              }
+            ]
+          },
+          {
+            show: false,
+            cont: [
+              {
+                class: 'classify-popup-item active',
+                name: '择美优配3-1',
+                icon: '#icon-icon-yes-active'
+              },
+              {
+                class: 'classify-popup-item',
+                name: '择美优配3-2',
+                icon: '#icon-icon-yes'
+              }
+            ]
+          },
+          {
+            show: false,
+            cont: [
+              {
+                class: 'classify-popup-item active',
+                name: '择美优配4-1',
+                icon: '#icon-icon-yes-active'
+              },
+              {
+                class: 'classify-popup-item',
+                name: '择美优配4-2',
+                icon: '#icon-icon-yes'
+              }
+            ]
+          },
+          {
+            show: false,
+            cont: [
+              {
+                class: 'classify-popup-item active',
+                name: '择美优配5-1',
+                icon: '#icon-icon-yes-active'
+              },
+              {
+                class: 'classify-popup-item',
+                name: '择美优配5-2',
+                icon: '#icon-icon-yes'
+              }
+            ]
+          }
+        ];
+      }
+    }
+  },
   data() {
     return {
-      classifyTab: [
-        {
-          name: '品牌',
-          class: 'shop-classify-item',
-          icon: '#icon-down-arrow'
-        },
-        {
-          name: '风格',
-          class: 'shop-classify-item',
-          icon: '#icon-down-arrow'
-        },
-        {
-          name: '空间',
-          class: 'shop-classify-item',
-          icon: '#icon-down-arrow'
-        },
-        {
-          name: '品类',
-          class: 'shop-classify-item',
-          icon: '#icon-down-arrow'
-        },
-        {
-          name: '模型',
-          class: 'shop-classify-item',
-          icon: '#icon-down-arrow'
-        }
-      ],
-      classifyItem: [
-        {
-          show: true,
-          cont: [
-            {
-              class: 'classify-popup-item active',
-              name: '择美优配1-1',
-              icon: '#icon-icon-yes-active'
-            },
-            {
-              class: 'classify-popup-item',
-              name: '择美优配1-2',
-              icon: '#icon-icon-yes'
-            }
-          ]
-        },
-        {
-          show: false,
-          cont: [
-            {
-              class: 'classify-popup-item active',
-              name: '择美优配2-1',
-              icon: '#icon-icon-yes-active'
-            },
-            {
-              class: 'classify-popup-item',
-              name: '择美优配2-2',
-              icon: '#icon-icon-yes'
-            }
-          ]
-        },
-        {
-          show: false,
-          cont: [
-            {
-              class: 'classify-popup-item active',
-              name: '择美优配3-1',
-              icon: '#icon-icon-yes-active'
-            },
-            {
-              class: 'classify-popup-item',
-              name: '择美优配3-2',
-              icon: '#icon-icon-yes'
-            }
-          ]
-        },
-        {
-          show: false,
-          cont: [
-            {
-              class: 'classify-popup-item active',
-              name: '择美优配4-1',
-              icon: '#icon-icon-yes-active'
-            },
-            {
-              class: 'classify-popup-item',
-              name: '择美优配4-2',
-              icon: '#icon-icon-yes'
-            }
-          ]
-        },
-        {
-          show: false,
-          cont: [
-            {
-              class: 'classify-popup-item active',
-              name: '择美优配5-1',
-              icon: '#icon-icon-yes-active'
-            },
-            {
-              class: 'classify-popup-item',
-              name: '择美优配5-2',
-              icon: '#icon-icon-yes'
-            }
-          ]
-        }
-      ],
       classifyShow: false,
       whichTab: 0
     };
@@ -206,7 +218,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 -16px 20px;
+  // margin: 0 -16px 20px;
   padding: 32px 12px 12px;
   background-color: #fff;
   &-item {
@@ -247,10 +259,10 @@ export default {
 }
 .classify-popup-warp {
   position: absolute;
-  top: 513px;
   left: 0;
   z-index: 999;
   width: 100%;
+  // margin-top: -20px;
   background-color: #fff;
   border: 1px solid #ebebeb;
   border-width: 1px 0;
@@ -277,5 +289,6 @@ export default {
   bottom: 0;
   z-index: 3;
   background: rgba(0, 0, 0, 0.5);
+  // background: linear-gradient(transparent 33vw,rgba(0, 0, 0, 0.5) 0);
 }
 </style>

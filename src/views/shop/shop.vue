@@ -6,7 +6,9 @@
     <div class="shop-banner">
       <img src="@/assets/shop-banner.png">
     </div>
-    <classify></classify>
+    <div class="classify-warp">
+      <classify></classify>
+    </div>
     <ul class="shop-goods">
       <li class="shop-goods-item">
         <div class="shop-goods-img">
@@ -201,5 +203,8 @@ export default {
       }
     }
   }
+}
+.classify-warp{
+  margin: 0 -16px;
 }
 </style>

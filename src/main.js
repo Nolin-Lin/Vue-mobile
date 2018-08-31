@@ -1,3 +1,4 @@
+import '@/js/iconfont.min';
 import Vue from 'vue';
 import FastClick from 'fastclick';
 import App from './App.vue';

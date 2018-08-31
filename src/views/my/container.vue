@@ -17,8 +17,8 @@ export default {
 
 <style lang='scss' scoped>
     .my-cont{
-        height: 100%;
         background-color: #EFF3F6;
+        height: 100vh;
     }
     .router-fade-enter-active, .router-fade-leave-active {
         transition: opacity .3s;
