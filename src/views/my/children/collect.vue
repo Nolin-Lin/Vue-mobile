@@ -129,6 +129,30 @@
           </div>
         </div>
       </li>
+      <li class="case-item">
+        <div class="case-img">
+          <img src="@/assets/goods-img.png">
+        </div>
+        <div class="case-info">
+          <div class="case-info-name">北欧客厅风格</div>
+          <div>
+            <span class="case-info-tab">客厅</span>
+            <span class="case-info-tab">中式</span>
+          </div>
+        </div>
+      </li>
+      <li class="case-item">
+        <div class="case-img">
+          <img src="@/assets/goods-img.png">
+        </div>
+        <div class="case-info">
+          <div class="case-info-name">北欧客厅风格</div>
+          <div>
+            <span class="case-info-tab">客厅</span>
+            <span class="case-info-tab">中式</span>
+          </div>
+        </div>
+      </li>
     </ul>
     <totop></totop>
   </div>

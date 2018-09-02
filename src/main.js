@@ -1,3 +1,4 @@
+import 'swiper/dist/css/swiper.min.css';
 import '@/js/iconfont.min';
 import Vue from 'vue';
 import FastClick from 'fastclick';

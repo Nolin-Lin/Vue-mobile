@@ -10,16 +10,10 @@
 
 <script>
 export default {
-  mounted() {
-    console.log(document.body.offsetHeight);
-  }
 };
 </script>
 <style lang="scss">
   @import "./style/common.css";
-  #app{
-    // height: 100%;
-  }
   .router-fade-enter-active, .router-fade-leave-active {
     transition: opacity .3s;
   }
