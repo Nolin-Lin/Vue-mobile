@@ -10,7 +10,7 @@
       <classify></classify>
     </div>
     <ul class="shop-goods">
-      <li class="shop-goods-item">
+      <router-link to="/detail" tag="li" class="shop-goods-item">
         <div class="shop-goods-img">
           <img src="@/assets/goods-img.png">
         </div>
@@ -21,7 +21,7 @@
             <span class="shop-goods-tab">打折</span>
           </div>
         </div>
-      </li>
+      </router-link>
       <li class="shop-goods-item">
         <div class="shop-goods-img">
           <img src="@/assets/goods-img.png">

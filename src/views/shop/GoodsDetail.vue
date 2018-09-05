@@ -62,7 +62,7 @@ export default {
 
 <style lang="scss">
   .swiper-container{
-    height: 568px;
+    height: 540px;
     overflow: hidden;
     .swiper-pagination-bullet{
       width: 14px;
@@ -100,6 +100,9 @@ export default {
       justify-content: space-between;
       padding: 30px 0;
       border-bottom: 1px solid #EBEBEB;
+      &:last-child{
+        border-bottom: 0;
+      }
     }
     &-name{
       color: #B2C0C8;

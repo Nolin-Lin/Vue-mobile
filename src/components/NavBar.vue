@@ -30,7 +30,7 @@ export default {
   position: relative;
   padding: 21px 31px;
   background-color: #373A3F;
-  border-bottom: 1px solid #ebebeb;
+  // border-bottom: 1px solid #ebebeb;
   color: #fff;
 
   &-svg{

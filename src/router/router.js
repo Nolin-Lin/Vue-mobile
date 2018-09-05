@@ -8,7 +8,8 @@ const routes = [
   { path: '/login', component: resolve => require(['@/views/login/login'], resolve) },
   { path: '/index', component: resolve => require(['@/views/index/index'], resolve) },
   { path: '/shop', component: resolve => require(['@/views/shop/shop'], resolve) },
-  { path: '/detail', component: resolve => require(['@/views/shop/GoodsDetail'], resolve) },
+  { path: '/GoodsDetail', component: resolve => require(['@/views/shop/GoodsDetail'], resolve) },
+  { path: '/CaseDetail', component: resolve => require(['@/views/shop/CaseDetail'], resolve) },
   {
     path: '/my',
     redirect: '/my/my',
