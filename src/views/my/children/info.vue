@@ -79,7 +79,6 @@
 </template>
 
 <script>
-import '@/js/iconfont.min';
 import NavBar from '@/components/NavBar.vue';
 
 export default {

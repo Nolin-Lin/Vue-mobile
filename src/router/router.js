@@ -4,7 +4,7 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 const routes = [
-  { path: '/', redirect: 'index', component: resolve => require(['@/views/index/index'], resolve) },
+  { path: '/', redirect: 'login', component: resolve => require(['@/views/login/login'], resolve) },
   { path: '/login', component: resolve => require(['@/views/login/login'], resolve) },
   { path: '/index', component: resolve => require(['@/views/index/index'], resolve) },
   { path: '/shop', component: resolve => require(['@/views/shop/shop'], resolve) },
