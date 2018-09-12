@@ -2,6 +2,7 @@ import 'swiper/dist/css/swiper.min.css';
 import '@/utils/iconfont.min';
 import Vue from 'vue';
 import FastClick from 'fastclick';
+import toastRegistry from '@/components/toast/index';
 import App from './App.vue';
 import router from './router/router';
 import store from './store';
@@ -18,6 +19,7 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
+Vue.use(toastRegistry);
 Vue.config.productionTip = false;
 
 new Vue({

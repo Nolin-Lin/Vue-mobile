@@ -7,7 +7,7 @@
       <input type="number" placeholder="验证码" v-model="loginForm.vcCode">
       <div class="input-btn">获取验证码</div>
     </div>
-    <div class="login-btn">登录</div>
+    <div class="login-btn" @click="login">登录</div>
     <div class="login-tip">
       <div>角色：store, factory, seller, user</div>
       <div>验证码：随意</div>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-// import { validateusername } from '@/utils/validate';
+import { validateusername } from '@/utils/validate';
 
 export default {
   name: 'login',
@@ -27,6 +27,14 @@ export default {
         vcCode: 1234
       }
     };
+  },
+  methods: {
+    login() {
+      if (validateusername(this.loginForm.role)) {
+        this.$toast('登录成功');
+        this.$router.replace({ path: '/index' });
+      }
+    }
   }
 };
 </script>
